@@ -1821,7 +1821,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 			if (port == "-1") port = "80";
 			
 			let 伪装域名 = host ;
-			let 最终路径 = '/?ed=2560' ;
+			let 最终路径 = '/?ed=7907' ;
 			let 节点备注 = '';
 			const 协议类型 = atob(啥啥啥_写的这是啥啊);
 			
@@ -1878,7 +1878,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 		if (port == "-1") port = "443";
 		
 		let 伪装域名 = host ;
-		let 最终路径 = '/?ed=2560' ;
+		let 最终路径 = '/?ed=7907' ;
 		let 节点备注 = '';
 		const matchingProxyIP = proxyIPPool.find(proxyIP => proxyIP.includes(address));
 		if (matchingProxyIP) 最终路径 += `&proxyip=${matchingProxyIP}`;
@@ -1886,7 +1886,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 		if(proxyhosts.length > 0 && (伪装域名.includes('.workers.dev') || 伪装域名.includes('pages.dev'))) {
 			最终路径 = `/${伪装域名}${最终路径}`;
 			伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-			节点备注 = ` 已启用临时域名中转服务，请尽快绑定自定义域！`;
+			节点备注 = ` 已启用中转`;
 		}
 		
 		const 协议类型 = atob(啥啥啥_写的这是啥啊);
